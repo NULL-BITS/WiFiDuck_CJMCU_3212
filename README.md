@@ -34,18 +34,19 @@ from within a web interface. This means that, unlike other BadUSBs, you don't ne
 1. Open `esp_duck/esp_duck.ino` with the Arduino IDE.
 2. Under `Tools` > `Board` in the `WiFi Duck ESP8266` section, select your ESP8266
 3. Go to Tools > Disable Debug and choose I2C as connection
-4. In conf.h change the values to this ![image](https://github.com/TomFang1/WiFiDuck_CJMCU_3212/assets/80842080/4ee60d32-e0a6-4911-8f11-36a0477cfb06)
-5. Then under Sketch > export and compile bin
-6. after that copy the path from your exported bin
-7. Download this tool https://github.com/nodemcu/nodemcu-flasher/blob/master/Win64/Release/ESP8266Flasher.exe
-8. Then open it and under settings paste your copied path in the fist entry
-9. then change your uploadrate to 9200
-10. reconnect your CJCMU3212 and select Arduino Leonardo in arduino
-11. Flash this https://github.com/robertio/DM-3212-Badusb/blob/master/step1.ino
-12. after that reconnect your CJMCU with the two metal bin on front connected with a cable etc
-13. Now you should flash your previously exported bin with the tool from step 7 (kepp the metal pins connected till end)
-14. remove the cable and reconnect your CJMCU3212
-15. Now your ESSP8266 is reeady now we have to flash the atmega
+4. In conf.h change the values to this
+![image](https://github.com/TomFang1/WiFiDuck_CJMCU_3212/assets/80842080/4ee60d32-e0a6-4911-8f11-36a0477cfb06)
+6. Then under Sketch > export and compile bin
+7. after that copy the path from your exported bin
+8. Download this tool https://github.com/nodemcu/nodemcu-flasher/blob/master/Win64/Release/ESP8266Flasher.exe
+9. Then open it and under settings paste your copied path in the fist entry
+10. then change your uploadrate to 9200
+11. reconnect your CJCMU3212 and select Arduino Leonardo in arduino
+12. Flash this https://github.com/robertio/DM-3212-Badusb/blob/master/step1.ino
+13. after that reconnect your CJMCU with the two metal bin on front connected with a cable etc
+14. Now you should flash your previously exported bin with the tool from step 7 (kepp the metal pins connected till end)
+15. remove the cable and reconnect your CJMCU3212
+16. Now your ESSP8266 is reeady now we have to flash the atmega
 
 ### Flash Atmega32u4
 
