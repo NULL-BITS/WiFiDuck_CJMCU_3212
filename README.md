@@ -57,118 +57,6 @@ By using a simple scripting language, it's easy to make BadUSBs type whatever yo
 With the WiFi Duck, you can simply connect via WiFi to manage all scripts
 from within a web interface. This means that, unlike other BadUSBs, you don't need to install an app, log in, compile or copy scripts to an SD card.  
 
-## Usage
-
-<p align="center">
-  <a href="https://www.youtube.com/watch?v=sSJuGXd8QRk">
-    <img alt="WiFi Duck Video Thumbnail" src="https://raw.githubusercontent.com/spacehuhn/WiFiDuck/master/img/showcase.gif" width="400">
-    <br>
-    <b>Watch the full video</b>
-  </a>
-</p>
-
-1. Plug in your WiFi Duck
-2. Connect to the WiFi network `wifiduck` with the password `wifiduck`
-3. Open a browser and visit `192.168.4.1`
-4. Write, save and run your first Ducky Script
-5. [Recommended] Open `Settings` (top right corner) and update SSID and password
-
-**Help I forgot the password:**
-[Flash the ESP8266](#flash-esp8266), but make sure that you select `Erase Flash: Sketch + WiFi Settings`
-under Tools in the Arduino IDE.  
-
-If you have further questions, check out the [issue section](https://github.com/spacehuhn/WiFiDuck/issues).  
-
-## Support us
-
-Hey, do you like this kind of project?  
-It took a huge amount of effort to create!  
-
-To make sure we can keep working on free and open-source projects like this,  
-**please consider becoming a [:heart: Sponsor](https://github.com/sponsors/spacehuhntech) or support us via [:coffee: Ko-fi](https://ko-fi.com/spacehuhn).**  
-
-Visit [spacehuhn.com](https://spacehuhn.com) to learn more about us. :chicken:
-
-<a href='https://ko-fi.com/G2G75FA4V' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://cdn.ko-fi.com/cdn/kofi2.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
-
-## Buy Hardware
-
-### Malduino W
-
-<p align="center">
-  <a href="https://maltronics.com/collections/malduinos/products/malduino-w">
-    <img alt="Malduino W" src="img/malw.jpg" width="400">
-    <br>
-    <b>Go to Maltronics.com</b>
-  </a>
-</p>
-
-A nicely encased, inconspicuous looking BadUSB by Maltronics.  
-Having USB-A and USB-C makes it compatible with all kind of devices.  
-It comes flashed with the WiFi Duck firmware and works plug and play.  
-ℹ️ **[Documentation can be found here](http://docs.maltronics.com/malduino-w/)**
-
-### DSTIKE WiFi Duck
-
-<p align="center">
-  <a href="https://dstike.com/collections/frontpage/products/dstike-wifi-duck">
-    <img alt="DSTIKE WiFi Duck" src="img/dstikeboard.jpg" width="400">
-    <br>
-    <b>Got to DSTIKE.com</b>
-  </a>
-</p>
-
-A custom designed development board which comes preflashed with this software by Travis Lin.  
-
-You can update the ESP8266 over the air and flash the Atmega32u4 via Arduino, all while enclosed in its neat little case.  
-📺 **[Watch the How to Update Tutorial here](https://youtu.be/e3-nsOjclsY)**.
-
-If you wish to develop your own software or help improve this one, 
-the 8-bit DIP-switch makes it easy for you to access the Atmega32u4 or ESP8266 independently. 
-For more info see [Flash Software](#flash-software).
-
-| Mode | Atmega32u4 | ESP8266 | DIP-switch | Image |
-| --- | --- | --- | --- | --- |
-| Default Operating Mode | USB | On | 10101101 | <img alt="dstike wifi duck work mode" src="img/dstike_normal.jpg" height="50px"> |
-| Atmega32u4 Flash Mode | USB | Off |10101010 | <img alt="dstike wifi duck atmega mode" src="img/dstike_atmega.jpg" height="50px"> |
-| ESP8266 Flash Mode | Off | USB | 01011101 | <img alt="dstike wifi duck esp8266 mode" src="img/dstike_esp8266.jpg" height="50px"> |
-
-## DIY Hardware
-
-<p align="center">
-  <a href="https://www.youtube.com/watch?v=-Gmv98tUiYw">
-    <img alt="WiFi Duck Hardware Tutorial Video Thumbnail" src="https://img.youtube.com/vi/-Gmv98tUiYw/maxresdefault.jpg" width="400">
-    <br>
-    <b>Watch the video tutorial</b>
-  </a>
-</p>
-
-To build a WiFi Duck yourself, you need the following hardware:  
-* An Atmega32u4 development board (see the list below)  
-* An ESP8266 or ESP8285 development board (see the list below)  
-* Optional: A single Neopixel (WS2812b) or Dotstar (APA102) LED
-
-To flash the microcontrollers you need a computer and USB cable.  
-
-If you're a beginner, it's recommended you wire everything together on a breadboard first!  
-In this case, you'd also need a breadboard with a couple of jumper wires.  
-
-If you wish to solder everything together into a small gadget,
-you also need soldering equipment.  
-
-You can use any Atmega32u4 or ESP8266 based development board,
-but if you have no idea where to start, here's a list.  
-:warning: **Keep in mind that you will need both microcontrollers!**  
-The Atmega32u4 to act as USB keyboard, and the ESP8266 for WiFi.
-
-### Atmega32u4 Development Boards
-* Arduino Leonardo
-* Arduino Micro
-* Sparkfun Pro Micro
-* CJMCU Beetle
-* SS Micro
-
-:bangbang: **DIGISPARK or other ATTINY85 based development boards, are NOT supported!** :bangbang:  
 
 ### ESP8266 Development Boards
 * NodeMCU 1.0 (ESP-12E Module)
@@ -223,23 +111,8 @@ just the ones mentioned in [Connections](#connections), excluding the LED.
   <img alt="Soldered PCBs" src="img/pcbs_soldered.jpg" width="400">
 </p>
 
-Design Files:  
-* Pro Micro + Wemos d1 mini: https://easyeda.com/Spacehuhn/wifi-duck
-* Pro Micro + NodeMCU: https://easyeda.com/Spacehuhn/diy-wifi-duck-pro-micro-nodemcu
-
-You can also order them on OSHPark:
-* Pro Micro + Wemos d1 mini: https://oshpark.com/shared_projects/ARCED9je
-* Pro Micro + NodeMCU: https://oshpark.com/shared_projects/XUuUH1HB
 
 ## Flash Software
-
-<p align="center">
-  <a href="https://youtu.be/VQAzxBefLZo">
-    <img alt="WiFi Duck Hardware Tutorial Video Thumbnail" src="https://img.youtube.com/vi/VQAzxBefLZo/maxresdefault.jpg" width="400">
-    <br>
-    <b>Watch the video tutorial</b>
-  </a>
-</p>
 
 1. Download and install the [Arduino IDE](https://www.arduino.cc/en/main/software).
 2. Start the Arduino IDE, go to `File` > `Preferences`.
@@ -247,184 +120,46 @@ You can also order them on OSHPark:
 4. Go to `Tools` > `Board` > `Board Manager`, search for `wifi duck` and install `WiFi Duck AVR Boards` and `WiFi Duck ESP8266 Boards`.
 5. [Download](https://github.com/spacehuhn/WiFiDuck/archive/master.zip) and extract this repository or [git clone](https://github.com/spacehuhn/WiFiDuck.git) it.
 
-If you can't find the COM port of ESP8266 board, then you're probably missing the right drivers.
-Here are links to drivers of the 2 most used UART chips on ESP8266 development boards:
-- :floppy_disk: [CP2102](https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers)
-- :floppy_disk: [CH340](https://sparks.gogo.co.nz/ch340.html)
+### Flash ESP8266
+
+1. Open `esp_duck/esp_duck.ino` with the Arduino IDE.
+2. Under `Tools` > `Board` in the `WiFi Duck ESP8266` section, select your ESP8266
+3. Go to Tools > Disable Debug and choose I2C as connection
+4. In conf.h change the values to this ![image](https://github.com/TomFang1/WiFiDuck_CJMCU_3212/assets/80842080/4ee60d32-e0a6-4911-8f11-36a0477cfb06)
+5. Then under Sketch > export and compile bin
+6. after that copy the path from your exported bin
+7. Download this tool https://github.com/nodemcu/nodemcu-flasher/blob/master/Win64/Release/ESP8266Flasher.exe
+8. Then open it and under settings paste your copied path in the fist entry
+9. then change your uploadrate to 9200
+10. reconnect your CJCMU3212 and select Arduino Leonardo in arduino
+11. Flash this https://github.com/robertio/DM-3212-Badusb/blob/master/step1.ino
+12. after that reconnect your CJMCU with the two metal bin on front connected with a cable etc
+13. Now you should flash your previously exported bin with the tool from step 7 (kepp the metal pins connected till end)
+14. remove the cable and reconnect your CJMCU3212
+15. Now your ESSP8266 is reeady now we have to flash the atmega
 
 ### Flash Atmega32u4
 
 1. Open `atmegaduck/atmega_duck.ino` with the Arduino IDE.
-2. Under `Tools` > `Board` in the `WiFi Duck AVR` section, select your board;
-for example, `Sparkfun Pro Micro`.
-3. Connect the Atmega32u4 board via USB and select its port under `Tools` > `Port`.
-4. Optional: Under `Tools` you can enable the LED and set its pin.
-You can also change the USB ID to make it appear as a certain type of keyboard.
+2. Connect your CJMCU3212
+3. Under `Tools` > `Board`  select the normal arduino leonardo (not the wifi duck one)
 5. Press Upload.
+6. Finish
 
-### Flash ESP8266
+Soldering
 
-1. Open `esp_duck/esp_duck.ino` with the Arduino IDE.
-2. Under `Tools` > `Board` in the `WiFi Duck ESP8266` section, select your board.
-For example `NodeMCU 1.0 (ESP-12E Module)`.
-3. Connect the ESP8266 board via USB and select its port under `Tools` > `Port`.
-5. Press Upload.
+1. Grab a soldering Iron
+2. look at the table below
+3. solder the Esp8266 pins with a wire to the atmega Ports
 
-**Pro Tip:** If the ESP8266 is already running this software
-and you just want to update it, you don't have to connect it via USB.
-You can update it over the air! Simply connect to the `wifiduck` network (default password is `wifiduck`).  
-Then in Arduino at `Tools` > `Port` you should now see a network port.
-Select it and press `Upload`.  
+ 
+| ESP8266 | Atmega32u4 |
+| ------- | ---------- |
+| `D1` alias `GPIO 5` | `3` alias `SCL` |
+| `D2` alias `GPIO 4` | `2` alias `SDA` |
+| `GND` | `GND` |
 
-**Note:** After the initial flashing, the ESP8266 has to format its memory, so it might take a minute until it's fully ready.  
 
-If you connected the RGB LED:
-* Blue LED = Connection working
-* Green LED = Device ready
-
-### Unbrick Atmega32u4
-
-If you flashed your Atmega32u4 board with the wrong bootloader, 
-it will no longer appear in the port selection after you connect it.  
-To solve this, you need to:
-
-1. Connect the reset pin `RST` to ground `GND`.
-Preferably with a jumper wires, because you need to be able to disconnect it quickly.  
-2. Open a sketch, `atmegaduck/atmega_duck.ino` or an empty sketch.  
-**Make sure to have the correct board selected under `Tools` > `Board`!**
-3. Connect the board with the wire still connected.
-4. Press `Upload` and as soon as you see `Compiling...` turn to `Uploading...`, disconnect the wire.  
-
-Now it should flash the sketch and the correct bootloader.  
-
-## Scripting
-
-### Basics
-
-Keys are separated by a single space.  
-Everything written in a single line gets pressed and released at the same time.  
-To write text, use the STRING function.  
-It's compatible to Ducky Script, which was developed by the wonderful people at [Hak5](https://www.hak5.org/).  
-
-| Example | Explanation |
-| ------- | ----------- |
-| WINDOWS <br> r | Type the Windows key and then the r key |
-| WINDOWS r | Press the Windows key and the r key simultaneously |
-| STRING WINDOWS r | Write WINDOWS r |
-
-### Functions
-
-| Command | Example | Description |
-| ------- | ------- | ----------- |
-| `REM` | `REM Hello World!` |Comment |
-| `DEFAULTDELAY` or `DEFAULT_DELAY` | `DEFAULTDELAY 200` | Time in ms between every command |
-| `DELAY` | `DELAY 1000` | Delay in ms |
-| `STRING` | `STRING Hello World!` | Types the following string |
-| `REPEAT` or `REPLAY` | `REPEAT 3` | Repeats the last command n times |
-| `LOCALE` | `LOCALE DE` | Sets the keyboard layout. [List](#translate-keyboard-layout) |
-| `KEYCODE` | `KEYCODE 0x02 0x04` | Types a specific key code (modifier, key1[, ..., key6]) in decimal or hexadecimal |
-| `LED` | `LED 40 20 10` |Changes the color of the LED in decimal RGB values (0-255) |
-
-### Standard Keys
-
-| Key |
-| --- |
-| `a` - `z` |
-| `A` - `Z` |
-| `0` - `9` |
-| `F1` - `F12` |
-
-### Modifier Keys
-
-| Key |
-| --- |
-| `CTRL` or `CONTROL` |
-| `SHIFT` |
-| `ALT` |
-| `WINDOWS` or `GUI` |
-
-### Other Keys
-
-| Key |
-| --- |
-| `ENTER` |
-| `MENU` or `APP`|
-| `DELETE` |
-| `HOME` |
-| `INSERT` |
-| `PAGEUP` |
-| `PAGEDOWN` |
-| `UP` or `UPARROW` |
-| `DOWN` or `DOWNARROW` |
-| `LEFT` or `LEFTARROW` |
-| `RIGHT` or `RIGHTARROW` |
-| `TAB` |
-| `END` |
-| `ESC` or `ESCAPE` |
-| `SPACE` |
-| `PAUSE or BREAK` |
-| `CAPSLOCK` |
-| `NUMLOCK` |
-| `PRINTSCREEN` |
-| `SCROLLLOCK` |
-
-### Numpad Keys
-
-| Key |
-| --- |
-| `NUM_0` - `NUM_9` |
-| `NUM_ASTERIX` |
-| `NUM_ENTER` |
-| `NUM_MINUS` |
-| `NUM_DOT` |
-| `NUM_PLUS` |
-
-### Examples
-
-```
-REM Hello World for Windows PCs
-DEFAULTDELAY 200
-GUI r
-STRING notepad
-ENTER
-STRING Hello World!
-```
-
-## CLI Commands
-
-The command line interface or CLI is accessible using a serial connection to the ESP8266 (115200 baud, Newline ending) or via the web interface at `192.168.4.1/terminal.html`.  
-
-### General
-
-| Command | Description | Example |
-| ------- | ----------- | ------- |
-| help | Returns all available commands | `help` |
-| ram | Returns available memory in bytes | `ram` |
-| version | Returns version number | `version` |
-| settings | Returns list of settings | `settings` |
-| set -n/ame <value> -v/alue <value> | Sets value of a specific setting | `set ssid "why fight duck"` |
-| reset | Resets all settings to their default values | `reset` |
-| status | Returns status of i2c connection with Atmega32u4 | `status` |
-| run <...> | Starts executing a Ducky script | `run example.txt` |
-| stop <...> | Stops executing a Ducky script | `stop example.txt` |
-
-### SPIFFS File Management
-
-| Command | Description | Example |
-| ------- | ----------- | ------- |
-| mem | Returns available, used and free memory of SPIFFS in bytes | `mem` |
-| format | Formats SPIFFS | `format` |
-| ls <...> | Returns list of files | `ls /` |
-| create <...> | Creates file | `create example.duck` |
-| remove <...> | Deletes file | `remove example.duck` |
-| cat <...> | Returns content of file | `cat example.duck` |
-| rename -fileA,a <value> -fileB,b <value> | Renames file | `rename example.duck example.txt` |
-| write -f/ile <value> -c/ontent <value> | Writes (appends) data to file | `write example.txt "Hello World!"` |
-| stream <...> | Opens file stream | `stream example.txt` |
-| close | Closes file stream | `close` |
-| read | Read and return the result from file stream | `read` |
-
-If a stream is open, everything you type (except messages containing exactly `close` or `read`) will be written to the file until you type `close`!  
 
 ## How to Debug
 
