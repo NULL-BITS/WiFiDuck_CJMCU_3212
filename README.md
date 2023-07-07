@@ -209,6 +209,7 @@ See the [license file](LICENSE) for details.
 https://github.com/SpacehuhnTech > For the Project
 https://github.com/todely > For the soldering solution
 https://github.com/robertio > For updating the ESP8266 Flashmode script
+https://github.com/nodemcu/nodemcu-flasher/blob/master/Win64/Release/ESP8266Flasher.exe > ESP8266 Flasher
 
 ## Credits
 
