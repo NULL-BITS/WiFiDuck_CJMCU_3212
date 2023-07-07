@@ -62,7 +62,7 @@ Soldering
 
 1. Grab a soldering Iron
 2. look at the table below
-3. solder the Esp8266 pins with a wire to the atmega Ports
+3. solder the Esp8266 pins with a wire to the atmega pins
 
  
 | ESP8266 | Atmega32u4 |
