@@ -202,6 +202,11 @@ The continuation of this project counts on you!
 This software is licensed under the MIT License.
 See the [license file](LICENSE) for details.  
 
+## Thanks and Credits to
+https://github.com/SpacehuhnTech > For the Project
+https://github.com/todely > For the soldering solution
+https://github.com/robertio > For updating the ESP8266 Flashmode script
+
 ## Credits
 
 Software libraries used in this project:
