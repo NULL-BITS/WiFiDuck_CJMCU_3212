@@ -35,7 +35,9 @@ from within a web interface. This means that, unlike other BadUSBs, you don't ne
 2. Under `Tools` > `Board` in the `WiFi Duck ESP8266` section, select your ESP8266
 3. Go to Tools > Disable Debug and choose I2C as connection
 4. In conf.h change the values to this
+   
 ![image](https://github.com/TomFang1/WiFiDuck_CJMCU_3212/assets/80842080/4ee60d32-e0a6-4911-8f11-36a0477cfb06)
+
 6. Then under Sketch > export and compile bin
 7. after that copy the path from your exported bin
 8. Download this tool https://github.com/nodemcu/nodemcu-flasher/blob/master/Win64/Release/ESP8266Flasher.exe
