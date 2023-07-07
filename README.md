@@ -38,7 +38,7 @@ from within a web interface. This means that, unlike other BadUSBs, you don't ne
    
 ![image](https://github.com/TomFang1/WiFiDuck_CJMCU_3212/assets/80842080/4ee60d32-e0a6-4911-8f11-36a0477cfb06)
 
-6. Then under Sketch > export and compile bin
+6. Then under Sketch > export and compile bin (I'll include a precompiled bin in the future, so that you could skp this in the future)
 7. after that copy the path from your exported bin
 8. Download this tool https://github.com/nodemcu/nodemcu-flasher/blob/master/Win64/Release/ESP8266Flasher.exe
 9. Then open it and under settings paste your copied path in the fist entry
