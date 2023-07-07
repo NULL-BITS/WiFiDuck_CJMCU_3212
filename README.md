@@ -4,45 +4,7 @@
 <img alt="WiFi Duck Logo" src="img/thumbnail.jpg" width="640">
 </p>
 
-### 👉 Visit [wifiduck.com](https://wifiduck.com) for an improved documentation.
 
-Want to learn more about BadUSBs? Check out our online course: [learnbadusb.com](https://learnbadusb.com) 
-
----
-
-* [About](#about)
-* [Usage](#usage)
-* [Support us](#support-us)
-* [Buy Hardware](#buy-hardware)
-  + [Malduino W](#malduino-w)
-  + [DSTIKE WiFi Duck](#dstike-wifi-duck)
-* [DIY Hardware](#diy-hardware)
-  + [Atmega32u4 Development Boards](#atmega32u4-development-boards)
-  + [ESP8266 Development Boards](#esp8266-development-boards)
-  + [Connections](#connections)
-  + [PCB](#pcb)
-* [Flash Software](#flash-software)
-  + [Flash Atmega32u4](#flash-atmega32u4)
-  + [Flash ESP8266](#flash-esp8266)
-  + [Unbrick Atmega32u4](#unbrick-atmega32u4)
-* [Scripting](#scripting)
-  + [Basics](#basics)
-  + [Functions](#functions)
-  + [Standard Keys](#standard-keys)
-  + [Modifier Keys](#modifier-keys)
-  + [Other Keys](#other-keys)
-  + [Numpad Keys](#numpad-keys)
-  + [Examples](#examples)
-* [CLI Commands](#cli-commands)
-  + [General](#general)
-  + [SPIFFS File Management](#spiffs-file-management)
-* [How to Debug](#how-to-debug)
-* [Development](#development)
-  + [Edit Web Files](#edit-web-files)
-  + [Translate Keyboard Layout](#translate-keyboard-layout)
-* [Disclaimer](#disclaimer)
-* [License](#license)
-* [Credits](#credits)
 
 ## About
 
@@ -57,59 +19,6 @@ By using a simple scripting language, it's easy to make BadUSBs type whatever yo
 With the WiFi Duck, you can simply connect via WiFi to manage all scripts
 from within a web interface. This means that, unlike other BadUSBs, you don't need to install an app, log in, compile or copy scripts to an SD card.  
 
-
-### ESP8266 Development Boards
-* NodeMCU 1.0 (ESP-12E Module)
-* LOLIN(WEMOS) D1 Mini
-* LOLIN(WEMOS) D1 Mini Pro
-* LOLIN(WEMOS) D1 Mini Lite
-
-### Connections
-
-A map of pins that need to be connected.  
-
-| ESP8266 | Atmega32u4 |
-| ------- | ---------- |
-| `D1` alias `GPIO 5` | `3` alias `SCL` |
-| `D2` alias `GPIO 4` | `2` alias `SDA` |
-| `GND` | `GND` |
-
-Ideally, you want the Atmega32u4 to power the ESP8266, so it can run on **one** USB connection, instead of having to always plug in both.  
-To share power between both chips, you need a voltage regulator that takes 5V and turns it into 3.3V.  
-That's because USB runs on 5V, but the ESP8266 only takes 3.3V. Luckily most development boards have such a regulator on board.  
-**DO NOT CONNECT ESP8266 VCC to the ATMEGA32u4 VCC**, it will kill the ESP826. Instead look for the `5V` or `VIN` pin on your dev board, as those will be connected to the regulator.  
-
-| ESP8266 Dev Board |      Atmega32u4      |
-| ----------------- | -------------------- |
-| `5V` or `VIN`     | `RAW`, `5V` or `VIN` |
-
-To add a Neopixel (WS2812b) LED:  
-
-| Atmega32u4 | Neopixel LED |
-| ---------- | ------------ |
-| `7`* | `DI` alias `Data`, `In` |
-| `5V` alias `VCC` | `5V` alias `VCC` |
-| `GND` | `GND` |
-
-\* The Data pin can be changed later on in the software, pin 7 is just an example.  
-
-![Example of a DIY build using a Wemos d1 mini, a Pro Micro and a Neopixel LED](img/diy_example.jpg)
-
-### PCB
-
-To make the DIY process easier, I designed a little PCB.  
-
-You solder a Pro Micro board on one side and a Wemos d1 mini or NodeMCU board (depending on the PCB) on the other side.  
-That's it. You don't even have to solder all pins,
-just the ones mentioned in [Connections](#connections), excluding the LED.
-
-<p align="center">
-  <img alt="PCB Layout" src="img/pcbs.jpg" width="400">
-</p>
-
-<p align="center">
-  <img alt="Soldered PCBs" src="img/pcbs_soldered.jpg" width="400">
-</p>
 
 
 ## Flash Software
