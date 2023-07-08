@@ -1,11 +1,3 @@
-# WiFi Duck
-
-<p align="center">
-<img alt="WiFi Duck Logo" src="img/thumbnail.jpg" width="640">
-</p>
-
-
-
 ## About
 
 This open-source project aims to provide a user-friendly tool to learn about keystroke injection attacks and 'BadUSBs'.  
